@@ -1,0 +1,41 @@
+---
+title: Quickstart
+description: Create an app, install the SDK, and complete your first authorization-code flow.
+---
+
+## Create a partner app
+
+- Open `/dashboard/apps/new`.
+- Choose a public client for browser-based integrations.
+- Add your callback URL, for example `https://partner.example.com/oauth/callback`.
+- Start with read-only scopes during development.
+
+## Install the SDK
+
+```bash
+pnpm add @anan/auth-sdk
+```
+
+## Initialize the client
+
+```ts
+import { createOidcClient } from "@anan/auth-sdk/client";
+
+export const ananAuth = createOidcClient({
+  issuer: process.env.NEXT_PUBLIC_ANAN_AUTH_ISSUER!,
+  clientId: process.env.NEXT_PUBLIC_ANAN_CLIENT_ID!,
+  redirectUri: "/oauth/callback",
+});
+```
+
+## Server-side protection
+
+```ts
+import { requireAuth, requireScopes } from "@anan/auth-sdk/server";
+
+export async function loadClients() {
+  const context = await requireAuth({ audience: "anan-api" });
+  requireScopes(context, ["clients:read_own"]);
+  return context;
+}
+```

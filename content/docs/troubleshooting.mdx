@@ -1,0 +1,24 @@
+---
+title: Troubleshooting
+description: Common integration errors and safe fixes.
+---
+
+## Redirect URI mismatch
+
+- Confirm the callback URL exactly matches a registered redirect URI.
+- Check protocol, host, path, and trailing slashes.
+
+## Invalid scope
+
+- Remove scopes not enabled for your app.
+- Request review before using production-only scopes.
+
+## Token verification failed
+
+- Confirm your API validates against the current issuer.
+- Refresh JWKS when keys rotate.
+- Reject expired tokens instead of extending them locally.
+
+## Local development
+
+Use `http://localhost` redirect URIs for local testing. Do not use LAN or production callback URLs unless they are explicitly registered.

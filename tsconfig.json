@@ -1,0 +1,270 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2018",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "types": [
+      "react",
+      "react-dom",
+      "node"
+    ],
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/.source": [
+        "./.source/index.ts"
+      ],
+      "@/.source/server": [
+        "./.source/server.ts"
+      ],
+      "@/*": [
+        "./*"
+      ],
+      "@anan/authorization": [
+        "../anan/packages/authorization/src/index.ts"
+      ],
+      "@anan/authorization/react": [
+        "../anan/packages/authorization/src/react/index.tsx"
+      ],
+      "@anan/platform-core": [
+        "../anan/packages/platform-core/src/index.ts"
+      ],
+      "@anan/platform-core/auth-next": [
+        "../anan/packages/platform-core/src/auth-next.ts"
+      ],
+      "@anan/platform-core/classnames": [
+        "../anan/packages/platform-core/src/classnames.ts"
+      ],
+      "@anan/platform-core/convex-api": [
+        "../anan/packages/platform-core/src/convex-api.ts"
+      ],
+      "@anan/platform-core/errors": [
+        "../anan/packages/platform-core/src/errors.ts"
+      ],
+      "@anan/platform-core/locale": [
+        "../anan/packages/platform-core/src/locale.ts"
+      ],
+      "@anan/platform-core/session": [
+        "../anan/packages/platform-core/src/session.ts"
+      ],
+      "@anan/auth": [
+        "../anan/packages/auth/src/index.ts"
+      ],
+      "@anan/auth/client": [
+        "../anan/packages/auth/src/client/index.ts"
+      ],
+      "@anan/auth/react": [
+        "../anan/packages/auth/src/react/index.ts"
+      ],
+      "@anan/auth/resource-server": [
+        "../anan/packages/auth/src/resource-server/index.ts"
+      ],
+      "@anan/auth/scopes": [
+        "../anan/packages/auth/src/scopes/index.ts"
+      ],
+      "@anan/auth/server": [
+        "../anan/packages/auth/src/server/index.ts"
+      ],
+      "@anan/auth/server/oauth-provider": [
+        "../anan/packages/auth/src/server/oauth-provider.ts"
+      ],
+      "@anan/auth-client": [
+        "../anan/packages/auth-client/src/index.ts"
+      ],
+      "@anan/auth-client/web": [
+        "../anan/packages/auth-client/src/web.ts"
+      ],
+      "@anan/auth-client/admin": [
+        "../anan/packages/auth-client/src/admin.ts"
+      ],
+      "@anan/auth-client/forms": [
+        "../anan/packages/auth-client/src/forms.ts"
+      ],
+      "@anan/auth-client/partners": [
+        "../anan/packages/auth-client/src/partners.ts"
+      ],
+      "@anan/convex-adapters": [
+        "../anan/packages/convex-adapters/src/index.ts"
+      ],
+      "@anan/convex-adapters/api": [
+        "../anan/packages/convex-adapters/src/api.ts"
+      ],
+      "@anan/convex-adapters/repository": [
+        "../anan/packages/convex-adapters/src/repository.ts"
+      ],
+      "@anan/domain-contracts": [
+        "../anan/packages/domain-contracts/src/index.ts"
+      ],
+      "@anan/domain-contracts/anan-pro": [
+        "../anan/packages/domain-contracts/src/ananPro.ts"
+      ],
+      "@anan/domain-contracts/compliance": [
+        "../anan/packages/domain-contracts/src/compliance.ts"
+      ],
+      "@anan/domain-contracts/deals": [
+        "../anan/packages/domain-contracts/src/deals.ts"
+      ],
+      "@anan/domain-contracts/errors": [
+        "../anan/packages/domain-contracts/src/errors.ts"
+      ],
+      "@anan/domain-contracts/files": [
+        "../anan/packages/domain-contracts/src/files.ts"
+      ],
+      "@anan/domain-contracts/gcc-countries": [
+        "../anan/packages/domain-contracts/src/gccCountries.ts"
+      ],
+      "@anan/domain-contracts/inbox": [
+        "../anan/packages/domain-contracts/src/inbox.ts"
+      ],
+      "@anan/domain-contracts/market": [
+        "../anan/packages/domain-contracts/src/market.ts"
+      ],
+      "@anan/domain-contracts/notifications": [
+        "../anan/packages/domain-contracts/src/notifications.ts"
+      ],
+      "@anan/domain-contracts/oauth": [
+        "../anan/packages/domain-contracts/src/oauth.ts"
+      ],
+      "@anan/domain-contracts/offers": [
+        "../anan/packages/domain-contracts/src/offers.ts"
+      ],
+      "@anan/domain-contracts/org-api": [
+        "../anan/packages/domain-contracts/src/orgApi.ts"
+      ],
+      "@anan/domain-contracts/organization-api-keys": [
+        "../anan/packages/domain-contracts/src/organizationApiKeys.ts"
+      ],
+      "@anan/domain-contracts/organizations": [
+        "../anan/packages/domain-contracts/src/organizations.ts"
+      ],
+      "@anan/domain-contracts/profiles": [
+        "../anan/packages/domain-contracts/src/profiles.ts"
+      ],
+      "@anan/domain-contracts/projects": [
+        "../anan/packages/domain-contracts/src/projects.ts"
+      ],
+      "@anan/domain-contracts/properties": [
+        "../anan/packages/domain-contracts/src/properties.ts"
+      ],
+      "@anan/domain-contracts/session": [
+        "../anan/packages/domain-contracts/src/session.ts"
+      ],
+      "@anan/domain-contracts/verifications": [
+        "../anan/packages/domain-contracts/src/verifications.ts"
+      ],
+      "@anan/domain-contracts/workspace": [
+        "../anan/packages/domain-contracts/src/workspace.ts"
+      ],
+      "@anan/testing": [
+        "../anan/packages/testing/src/index.ts"
+      ],
+      "@anan/testing/oauth": [
+        "../anan/packages/testing/src/oauth.ts"
+      ],
+      "@anan/testing/profile": [
+        "../anan/packages/testing/src/profile.ts"
+      ],
+      "@anan/testing/react": [
+        "../anan/packages/testing/src/react.ts"
+      ],
+      "@anan/testing/repository": [
+        "../anan/packages/testing/src/repository.ts"
+      ],
+      "@anan/testing/route": [
+        "../anan/packages/testing/src/route.ts"
+      ],
+      "@anan/testing/session": [
+        "../anan/packages/testing/src/session.ts"
+      ],
+      "@anan/testing/vitest": [
+        "../anan/packages/testing/src/vitest.ts"
+      ],
+      "@anan/ui": [
+        "../anan/packages/ui/src/index.ts"
+      ],
+      "@anan/ui/admin": [
+        "../anan/packages/ui/src/admin/index.ts"
+      ],
+      "@anan/ui/auth": [
+        "../anan/packages/ui/src/auth/index.ts"
+      ],
+      "@anan/ui/chat": [
+        "../anan/packages/ui/src/chat/index.ts"
+      ],
+      "@anan/ui/docs": [
+        "../anan/packages/ui/src/docs/index.ts"
+      ],
+      "@anan/ui/forms": [
+        "../anan/packages/ui/src/forms/index.ts"
+      ],
+      "@anan/ui/oauth": [
+        "../anan/packages/ui/src/oauth/index.ts"
+      ],
+      "@anan/ui/public": [
+        "../anan/packages/ui/src/public/index.ts"
+      ],
+      "@anan/ui/workspace": [
+        "../anan/packages/ui/src/workspace/index.ts"
+      ],
+      "@anan/ui/button": [
+        "../anan/packages/ui/src/components/ui/button.tsx"
+      ],
+      "@anan/ui/dropdown-menu": [
+        "../anan/packages/ui/src/components/ui/dropdown-menu.tsx"
+      ],
+      "@anan/web-foundation": [
+        "../anan/packages/web-foundation/src/index.ts"
+      ],
+      "@anan/web-foundation/api": [
+        "../anan/packages/web-foundation/src/api.ts"
+      ],
+      "@anan/web-foundation/auth-session": [
+        "../anan/packages/web-foundation/src/auth-session.ts"
+      ],
+      "@anan/web-foundation/convex-provider": [
+        "../anan/packages/web-foundation/src/convex-provider.tsx"
+      ],
+      "@anan/web-foundation/media": [
+        "../anan/packages/web-foundation/src/media.ts"
+      ],
+      "@anan/web-foundation/fonts": [
+        "../anan/packages/web-foundation/src/fonts.ts"
+      ],
+      "@anan/web-foundation/locale": [
+        "../anan/packages/web-foundation/src/locale.ts"
+      ],
+      "@anan/web-foundation/theme": [
+        "../anan/packages/web-foundation/src/theme.tsx"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    ".source/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

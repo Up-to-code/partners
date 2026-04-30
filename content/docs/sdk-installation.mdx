@@ -1,0 +1,38 @@
+---
+title: SDK installation
+description: Install and configure @anan/auth-sdk for client and server usage.
+---
+
+## Package
+
+```bash
+pnpm add @anan/auth-sdk
+```
+
+## React provider
+
+Use the React provider near the root of your application. Access tokens remain memory-only and refresh through a server route backed by secure cookies.
+
+```tsx
+import { AuthProvider } from "@anan/auth-sdk/react";
+
+export function AppProviders({ children }: { children: React.ReactNode }) {
+  return (
+    <AuthProvider refreshEndpoint="/api/auth-sdk/refresh" sessionEndpoint="/api/auth-sdk/session">
+      {children}
+    </AuthProvider>
+  );
+}
+```
+
+## Server helpers
+
+```ts
+import { requireAuth, requireEntitlement } from "@anan/auth-sdk/server";
+
+export async function requirePartnerAdmin() {
+  const context = await requireAuth({ audience: "anan-partners" });
+  requireEntitlement(context, "platform:admin");
+  return context;
+}
+```

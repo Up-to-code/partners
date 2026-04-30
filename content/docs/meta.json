@@ -1,0 +1,12 @@
+{
+  "title": "Partner Docs",
+  "pages": [
+    "index",
+    "quickstart",
+    "sdk-installation",
+    "register-an-app",
+    "oauth-flow",
+    "api-usage",
+    "troubleshooting"
+  ]
+}

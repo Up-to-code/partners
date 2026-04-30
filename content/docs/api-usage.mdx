@@ -1,0 +1,35 @@
+---
+title: API usage
+description: Call Anan organization APIs with verified access tokens and least-privilege scopes.
+---
+
+## Resource server checks
+
+Every API request must validate issuer, audience, signature, expiry, and scopes before business logic runs.
+
+```ts
+import { verifyAccessToken } from "@anan/auth-sdk/oidc";
+import { requireScopes } from "@anan/auth-sdk/authorization";
+
+export async function authorizeRequest(token: string) {
+  const context = await verifyAccessToken(token, {
+    issuer: process.env.ANAN_AUTH_ISSUER!,
+    audience: "anan-api",
+  });
+
+  requireScopes(context, ["clients:read_own"]);
+  return context;
+}
+```
+
+## Ownership checks
+
+Scopes are not ownership. Keep resource checks explicit:
+
+```ts
+import { requireResourceOwner } from "@anan/auth-sdk/authorization";
+
+requireResourceOwner(context, {
+  organizationId: client.organizationId,
+});
+```

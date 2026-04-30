@@ -1,0 +1,33 @@
+---
+title: Register an app
+description: Configure client metadata, redirect URIs, scopes, and review status.
+---
+
+## App metadata
+
+- App name appears in authorization and review screens.
+- Publisher identifies the organization responsible for the integration.
+- Icon and logo URLs must use `https://` in production.
+
+## Redirect URIs
+
+- Use exact redirect URLs.
+- Avoid wildcards.
+- Use `http://localhost` only for local development.
+
+## Scope requests
+
+Start narrow. Add scopes only when the product feature genuinely needs them.
+
+```txt
+offline_access
+clients:read_own
+properties:read_own
+projects:read_own
+```
+
+## Review states
+
+- `draft`: editable registration.
+- `pending_review`: locked while Anan reviews it.
+- `active`: approved for production organization authorization.
