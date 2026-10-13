@@ -60,3 +60,7 @@ Email/password sign-up is routed through `/api/partner-signup` so the raw Better
 - Partners publishes app registration, workspace capability discovery, authorization status, and event delivery payloads from `lib/anan-integration/contracts.ts`.
 - Anan remains the source of truth for workspace permissions, consent, and workspace-side execution.
 - Do not import `anan/convex/_generated/api` from this app.
+
+## Project links
+
+[Source](https://github.com/Up-to-code/partners) · [Issues](https://github.com/Up-to-code/partners/issues) · [Public project directory](https://github.com/qentrah/.github/blob/main/profile/PROJECTS.md)
